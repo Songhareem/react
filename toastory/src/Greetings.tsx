@@ -22,6 +22,6 @@ function Greetings({ name, mark, optional, onClick }: GreetingsProps) {
 
 Greetings.defaultProps = {
     mark: '!'
-}
+};
 
 export default Greetings;
