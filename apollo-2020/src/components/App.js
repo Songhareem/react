@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
+import React from "react";
+import { HashRouter as Router, Route } from "react-router-dom";
+import Home from "../routes/Home";
+import Detail from "../routes/Detail";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <h1>hihi</h1>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Route exact path="/" component={Home} />
+      <Route path="/:id" component={Detail} />
+    </Router>
+  );
 }
 
 export default App;
+
+/* <Router>
+      <Route exact path="/" component={Home}></Route>
+      <Route path="/:id" component={Detail}></Route>
+</Router> */
